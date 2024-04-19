@@ -11,7 +11,7 @@ class LearnCS {
   public LearnCS() {
     // I don't like this use of target-typed "new" expressions.
     // https://github.com/fordsfords/cs_tst?tab=readme-ov-file#type-inference
-    Sb1 = new("yuck");  // What type is sb??? You have to find it.
+    Sb1 = new("yuck");  // What type is Sb1??? You have to find it.
   }
 
 

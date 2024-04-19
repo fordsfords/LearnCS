@@ -29,7 +29,11 @@ at http://geeky-boy.com.  Can't see it?  Keep looking.
 
 ## Introduction
 
-## References:
+This repo is just a sandbox for experimenting with C#.
+I don't think anybody but me would be interested.
+It certainly should not be seen as an example of good C# code.
+
+## References
 
 Entry into .NET 8 ref:
 * https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0
@@ -87,12 +91,26 @@ with no noticalble delay.
 Now I'm sure that a good IDE would eliminate that delay,
 and at some point I should transition to VS Code.
 
+### Line Endings?
+
+I'm used to converting everything to Unix line endings.
+Experience suggests that dotnet tools handle it fine,
+but even the Linux and Mac versions of the "dotnet" tool creates files with
+cr/lf.
+
+Not only that, but the "dotnet" tool creates the file to start with the
+unicode [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) sequence: EF BB BF
+(in UTF-8).
+According to Wikipedia, 
+"The Unicode Standard permits the BOM in UTF-8,
+but does not require or recommend its use."
+
 ### Non-Nullable Objects?
 
 Why is it OK to have:
 * string s = null;
 
-BUt not:
+But not:
 * StringBuilder sb = null;
 
 The latter gives a warning about it being non-nullable.
