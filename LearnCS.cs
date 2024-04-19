@@ -5,6 +5,9 @@ using FordsFords.Errs;
 namespace FordsFords.LearnCS;
 
 class LearnCS {
+  const string Usage = "Usage: LearnCS TestNum"; // const compile-time eval.
+  // If Version were const, a caller would get the 1.0.0 compiled in a build time.
+  public static readonly int[] Version = {1, 0, 0};
   StringBuilder Sb1;
 
   // Constructor
@@ -17,7 +20,7 @@ class LearnCS {
 
   static int Main(string[] args) {
     if (args.Length == 0) {
-      Console.WriteLine("Usage: LearnCS TestNum");
+      Console.WriteLine(Usage);
       return 1;
     }
     // args[0] is the first parameter, not the program name.
@@ -333,6 +336,16 @@ class LearnCS {
 
   // foreach
   void Test11(string[] args) {
+    string s = new("abc");
+    int loops = 0;
+    var ca = new char[3];
+    foreach (char c in s) {
+      ca[loops] = c;
+      loops++;
+    }
+    Assrt.IsTrue(loops == 3);
+    Assrt.IsTrue(ca[0] == 'a');
+    Assrt.IsTrue(ca[2] == 'c');
   }  // Test11
 
 }  // LearnCS

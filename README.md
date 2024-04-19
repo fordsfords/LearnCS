@@ -50,6 +50,7 @@ and namespace names consisting of multiple words.
 They are not. Names cannot differ by case alone.
   * Although I haven't seen it explicitly stated, it looks like local
 variables are treated the same as input parameters - camelCase.
+Ditto private fields?
 
 Conventions:
 * https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
@@ -67,7 +68,8 @@ Here's the MS .NET runtime team's conventions:
 * https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md
 
 Excerpt:
-* Prefix internal and private instance fields with _, static fields with s_ and thread static fields with t_.
+* Prefix internal and private instance fields with '_',
+static fields with 's_ 'and thread static fields with 't_'.
 * When used on static fields, readonly should come after static (e.g. static readonly not readonly static).
 * Public fields should be used sparingly and should use PascalCasing with no prefix when used.
 
@@ -91,12 +93,47 @@ with no noticalble delay.
 Now I'm sure that a good IDE would eliminate that delay,
 and at some point I should transition to VS Code.
 
+### Field Naming
+
+Should class field names start with underscore?
+Apparently the MS .NET runtime team does.
+But the Nutshell book does not.
+
+I've looked through some of the flame wars on it,
+and I'm not sure I understand.
+It almost seems like some of the non-underscore people always use
+"this." to access any instance field.
+Really? Is this common?
+Again, the Netshell book doesn't use underscore,
+but also doesn't have "this." all over the place.
+
+Ultimately it doesn't matter.
+And if using a decent IDE, there should never be any question what
+a given identifier is.
+But when looking at code via a web browser or vi,
+a little help might not be bad.
+
+One disadvantage of always-this is you might forget to include "this."
+someplace, and chances are the compiler will do the "right" thing.
+It might lead you to hunt for a local by that name before realizing the
+programmer just forgot the "this."
+But omit an underscore and the compiler will complain.
+
 ### Line Endings?
 
 I'm used to converting everything to Unix line endings.
 Experience suggests that dotnet tools handle it fine,
 but even the Linux and Mac versions of the "dotnet" tool creates files with
 cr/lf.
+
+````
+$ file *.cs
+Errs.cs:    C++ source text, ASCII text
+LearnCS.cs: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators
+````
+
+The first incorrectly identifies the file as C++ instead of C#.
+But the second doesn't even identify as source.
 
 Not only that, but the "dotnet" tool creates the file to start with the
 unicode [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) sequence: EF BB BF
