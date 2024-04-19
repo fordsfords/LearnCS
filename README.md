@@ -40,11 +40,11 @@ Case Conventions:
 Excerpt:
 * DO use PascalCasing for all public member, type,
 and namespace names consisting of multiple words.
-** Whay does it stipulate "consisting of multiple words"?
+  * Whay does it stipulate "consisting of multiple words"?
 * DO use camelCasing for parameter names.
 * DO NOT assume that all programming languages are case sensitive.
 They are not. Names cannot differ by case alone.
-** Although I haven't seen it explicitly stated, it looks like local
+  * Although I haven't seen it explicitly stated, it looks like local
 variables are treated the same as input parameters - camelCase.
 
 Conventions:
@@ -75,13 +75,45 @@ From https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/i
 * By convention, C# programs use PascalCase for type names, namespaces,
 and all public members. 
 
-## Type Inference
+## Thoughts
 
-Nutshell book says:
+### Tool Speed
+
+For now I'm using command-line build tools ("dotnet build").
+Boy, is it slow.
+I'm used to C where I can just put the build right inside the test script
+with no noticalble delay.
+
+Now I'm sure that a good IDE would eliminate that delay,
+and at some point I should transition to VS Code.
+
+### Non-Nullable Objects?
+
+Why is it OK to have:
+* string s = null;
+
+BUt not:
+* StringBuilder sb = null;
+
+The latter gives a warning about it being non-nullable.
+
+### Var and Target-Typed New
+
+The Nutshell book says:
 * "var" can decrease code readability when you can't deduce the type
 purely by looking at the variable declaration.
-** Random r = new Random();  var x = r.Next();
+  * Random r = new Random();  var x = r.Next();
 * And yet, It seemed to think target-typed 'new' expressions are a good idea.
-** class foo { StringBuilder sb; public Foo() { sb = new("null"); }
+  * class foo { StringBuilder sb; public Foo() { sb = new("null"); }
 
 It seems to me that these are two faces of the same coin.
+
+### Switch Expressions
+
+I have the same complaint with switch expressions as I have with Lambdas:
+lack of readability.
+It's like they're trying to make it Perl!
+I see single-character variable names and no explanation of what is going on.
+
+Make it a function, for goodness sake!
+The function name itself serves as self-documentation.
