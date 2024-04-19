@@ -22,7 +22,7 @@ To the extent possible under law, the contributors to this project have
 waived all copyright and related or neighboring rights to this work.
 In other words, you can use this code for any purpose without any
 restrictions.  This work is published from: United States.  The project home
-is https://github.com/fordsfords/cs_tst
+is https://github.com/fordsfords/LearnCS
 
 To contact me, Steve Ford, project owner, you can find my email address
 at http://geeky-boy.com.  Can't see it?  Keep looking.
@@ -68,8 +68,8 @@ Here's the MS .NET runtime team's conventions:
 * https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md
 
 Excerpt:
-* Prefix internal and private instance fields with '_',
-static fields with 's_ 'and thread static fields with 't_'.
+* Prefix internal and private instance fields with '\_',
+static fields with 's\_ 'and thread static fields with 't\_'.
 * When used on static fields, readonly should come after static (e.g. static readonly not readonly static).
 * Public fields should be used sparingly and should use PascalCasing with no prefix when used.
 
