@@ -3,11 +3,17 @@ Repo for me to experiment with c#.
 Not interesting to anybody else.
 
 <!-- mdtoc-start -->
-&bull; [cs_tst](#cs_tst)  
+&bull; [LearnCS](#learncs)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [License](#license)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Introduction](#introduction)  
-&nbsp;&nbsp;&nbsp;&nbsp;&bull; [References:](#references)  
-&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Type Inference](#type-inference)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [References](#references)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Thoughts](#thoughts)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Tool Speed](#tool-speed)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Field Naming](#field-naming)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Line Endings?](#line-endings)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Non-Nullable Objects?](#non-nullable-objects)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Var and Target-Typed New](#var-and-target-typed-new)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Switch Expressions](#switch-expressions)  
 <!-- TOC created by '../mdtoc/mdtoc.pl README.md' (see https://github.com/fordsfords/mdtoc) -->
 <!-- mdtoc-end -->
 
