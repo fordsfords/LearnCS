@@ -6,7 +6,8 @@ Not interesting to anybody else.
 &bull; [LearnCS](#learncs)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [License](#license)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Introduction](#introduction)  
-&nbsp;&nbsp;&nbsp;&nbsp;&bull; [References](#references)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Reference](#reference)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Conventions](#conventions)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Thoughts](#thoughts)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Tool Speed](#tool-speed)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Field Naming](#field-naming)  
@@ -39,10 +40,28 @@ This repo is just a sandbox for experimenting with C#.
 I don't think anybody but me would be interested.
 It certainly should not be seen as an example of good C# code.
 
-## References
+## Reference
 
 Entry into .NET 8 ref:
 * https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0
+
+## Conventions
+
+Don't name namespace the same as any class in it.
+One suggestion is to make the namespace plural
+(i.e. it can old multiple instances of the class?).
+
+Conventions:
+* https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+
+Excerpt:
+* Use four spaces for indentation. Don't use tabs.
+* Limit lines to 65 characters to enhance code readability on docs,
+especially on mobile screens.
+* Use the "Allman" style for braces:
+open and closing brace its own new line.
+Braces line up with current indentation level.
+* Line breaks should occur before binary operators, if necessary.
 
 Case Conventions:
 * https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions
@@ -58,19 +77,14 @@ They are not. Names cannot differ by case alone.
 variables are treated the same as input parameters - camelCase.
 Ditto private fields?
 
-Conventions:
-* https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+Case Convention:
+* https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names
 
 Excerpt:
-* Use four spaces for indentation. Don't use tabs.
-* Limit lines to 65 characters to enhance code readability on docs,
-especially on mobile screens.
-* Use the "Allman" style for braces:
-open and closing brace its own new line.
-Braces line up with current indentation level.
-* Line breaks should occur before binary operators, if necessary.
+* By convention, C# programs use PascalCase for type names, namespaces,
+and all public members. 
 
-Here's the MS .NET runtime team's conventions:
+MS .NET runtime team's conventions:
 * https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md
 
 Excerpt:
@@ -134,7 +148,7 @@ cr/lf.
 
 ````
 $ file *.cs
-Errs.cs:    C++ source text, ASCII text
+Assrt.cs:   C++ source text, ASCII text
 LearnCS.cs: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators
 ````
 

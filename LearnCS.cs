@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using FordsFords.Errs;
+using FordsFords.Assrts;
 
 namespace FordsFords.LearnCS;
 
@@ -8,13 +8,13 @@ class LearnCS {
   const string Usage = "Usage: LearnCS TestNum"; // const compile-time eval.
   // If Version were const, a caller would get the 1.0.0 compiled in a build time.
   public static readonly int[] Version = {1, 0, 0};
-  StringBuilder Sb1;
+  StringBuilder _sb1;
 
   // Constructor
   public LearnCS() {
     // I don't like this use of target-typed "new" expressions.
     // https://github.com/fordsfords/cs_tst?tab=readme-ov-file#type-inference
-    Sb1 = new("yuck");  // What type is Sb1??? You have to find it.
+    _sb1 = new("yuck");  // What type is _sb1??? You have to find it.
   }
 
 

@@ -1,13 +1,13 @@
 using System;
 using System.Diagnostics;
 
-namespace FordsFords.Errs;
+namespace FordsFords.Assrts;
 
 class Assrt {
-  static int assrtCount = 0;
+  static int _assrtCount = 0;
 
   static public void IsTrue(bool test) {
-    assrtCount++;
+    _assrtCount++;
     if (test) return;
 
     StackTrace st = new StackTrace(true);
@@ -18,16 +18,16 @@ class Assrt {
     if (frame != null) {
       Console.WriteLine($"Failed Assrt: {timeNow}, " +
         frame.GetFileName() + ":" + frame.GetFileLineNumber());
-      Console.WriteLine($"Assrt Count: {assrtCount}\n");
+      Console.WriteLine($"Assrt Count: {_assrtCount}\n");
     } else {
       Console.WriteLine($"Failed Assrt: {timeNow}, unknown frame");
-      Console.WriteLine($"Assrt Count: {assrtCount}\n");
+      Console.WriteLine($"Assrt Count: {_assrtCount}\n");
     }
     throw new ArgumentException("Failed Assrt");
   }
 
   static public int GetAssrtCount() {
-    return assrtCount;
+    return _assrtCount;
   }
 
 
@@ -39,10 +39,10 @@ class Assrt {
     if (frame != null) {
       Console.WriteLine($"Fatal error: {msg}: {timeNow}, " +
         frame.GetFileName() + ":" + frame.GetFileLineNumber());
-      Console.WriteLine($"Assrt Count: {assrtCount}\n");
+      Console.WriteLine($"Assrt Count: {_assrtCount}\n");
     } else {
       Console.WriteLine($"Fatal error: {msg}: {timeNow}, unknown frame");
-      Console.WriteLine($"Assrt Count: {assrtCount}\n");
+      Console.WriteLine($"Assrt Count: {_assrtCount}\n");
     }
     throw new ArgumentException(msg);
   }  // Fatal
