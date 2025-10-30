@@ -4,7 +4,6 @@ Not interesting to anybody else.
 
 <!-- mdtoc-start -->
 &bull; [LearnCS](#learncs)  
-&nbsp;&nbsp;&nbsp;&nbsp;&bull; [License](#license)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Introduction](#introduction)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Reference](#reference)  
 &nbsp;&nbsp;&nbsp;&nbsp;&bull; [Conventions](#conventions)  
@@ -15,24 +14,9 @@ Not interesting to anybody else.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Non-Nullable Objects?](#non-nullable-objects)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Var and Target-Typed New](#var-and-target-typed-new)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Switch Expressions](#switch-expressions)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [License](#license)  
 <!-- TOC created by '../mdtoc/mdtoc.pl README.md' (see https://github.com/fordsfords/mdtoc) -->
 <!-- mdtoc-end -->
-
-## License
-
-Copyright 2024 Steven Ford http://geeky-boy.com and licensed
-"public domain" style under
-[CC0](http://creativecommons.org/publicdomain/zero/1.0/): 
-![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png "CC0")
-
-To the extent possible under law, the contributors to this project have
-waived all copyright and related or neighboring rights to this work.
-In other words, you can use this code for any purpose without any
-restrictions.  This work is published from: United States.  The project home
-is https://github.com/fordsfords/LearnCS
-
-To contact me, Steve Ford, project owner, you can find my email address
-at http://geeky-boy.com.  Can't see it?  Keep looking.
 
 ## Introduction
 
@@ -192,3 +176,16 @@ I see single-character variable names and no explanation of what is going on.
 
 Make it a function, for goodness sake!
 The function name itself serves as self-documentation.
+
+## License
+
+I want there to be NO barriers to using this code, so I am releasing it to the public domain.  But "public domain" does not have an internationally agreed upon definition, so I use CC0:
+
+This work is dedicated to the public domain under CC0 1.0 Universal:
+http://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, Steven Ford has waived all copyright
+and related or neighboring rights to this work. In other words, you can 
+use this code for any purpose without any restrictions.
+This work is published from: United States.
+Project home: https://github.com/fordsfords/LearnCS
